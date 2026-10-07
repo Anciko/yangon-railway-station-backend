@@ -1,29 +1,24 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="tw-font-semibold tw-text-xl tw-text-gray-800 dark:tw-text-gray-200 tw-leading-tight">
-            {{ __('Profile') }}
-        </h2>
-    </x-slot>
+@extends('layouts.app')
 
-    <div class="tw-py-12">
-        <div class="tw-max-w-7xl tw-mx-auto sm:tw-px-6 lg:tw-px-8 tw-space-y-6">
-            <div class="tw-p-4 sm:tw-p-8 tw-bg-white dark:tw-bg-gray-800 tw-shadow sm:tw-rounded-lg">
-                <div class="tw-max-w-xl">
-                    @include('profile.partials.update-profile-information-form')
-                </div>
-            </div>
+@section('content')
 
-            <div class="tw-p-4 sm:tw-p-8 tw-bg-white dark:tw-bg-gray-800 tw-shadow sm:tw-rounded-lg">
-                <div class="tw-max-w-xl">
-                    @include('profile.partials.update-password-form')
-                </div>
-            </div>
-
-            <div class="tw-p-4 sm:tw-p-8 tw-bg-white dark:tw-bg-gray-800 tw-shadow sm:tw-rounded-lg">
-                <div class="tw-max-w-xl">
-                    @include('profile.partials.delete-user-form')
-                </div>
+    <div class="row mb-6 gy-6">
+        <div class="col-xl">
+            <div class="card p-5">
+                <h2 class="text-black fs-4">Profile Information</h2>
+                @include('profile.partials.update-profile-information-form')
             </div>
         </div>
     </div>
-</x-app-layout>
+
+    <div class="row mb-6 gy-6">
+        <div class="col-xl">
+            <div class="card p-5">
+                <h2 class="text-black fs-4">Update Password</h2>
+                <p class="mb-4">Ensure your account is using a long, random password to stay secure.</p>
+                @include('profile.partials.update-password-form')
+
+            </div>
+        </div>
+    </div>
+@endsection
