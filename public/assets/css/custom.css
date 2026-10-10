@@ -1,3 +1,9 @@
+table#Datatable th {
+    outline: none !important;
+}
+
+
+
 .navbar-brand-box {
     padding: 0 1.5rem 0 1rem !important;
     width: 250px;
@@ -5,4 +11,11 @@
     border-right: 1px solid var(--bs-sidebar-border-color);
     -webkit-box-shadow: 0 2px 2px var(--bs-sidebar-bg);
     box-shadow: 0 2px 2px var(--bs-sidebar-bg);
+} 
+
+.error-help-block {
+    color: #EF4444 !important;
 }
+
+
+
